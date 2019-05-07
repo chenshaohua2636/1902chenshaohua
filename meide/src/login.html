@@ -53,12 +53,13 @@
                             <div class="biaodan_footer">
                                 <a href="javascript:;">短信验证登录</a>
                                 <i>|</i>
-                                <a href="javascript:;">注册</a>
+                                <a href="javascript:;" id="zhuce">注册</a>
                                 <a href="javascript:;">找回密码</a>
                             </div>
                         </form>
                     </div>
                 </div>
+
                 <!-- 注册表单 -->
                 <div class="registor">
                     <div class="registor_tel">使用手机号注册</div>
@@ -90,14 +91,27 @@
                                 <a href="javascript:;">注册</a>
                             </div>
                             <div class="reg_yiyou">
-                                <a href="javascript:;">已有账号？请登录</a>
+                                <a href="javascript:;" id="log">已有账号？请登录</a>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
-
+        <script>
+            var a = document.querySelector('#zhuce');
+            var log = document.querySelector('#log');
+            var reg = document.querySelector('.registor');
+            var login = document.querySelector('.login')
+            a.onclick = function() {
+                reg.style.display = 'block';
+                login.style.display = 'none';
+            }
+            log.onclick = function() {
+                reg.style.display = 'none';
+                login.style.display = 'block';
+            }
+        </script>
     </section>
     <!-- footer -->
     <footer id="footer">
