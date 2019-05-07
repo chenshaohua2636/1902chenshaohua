@@ -1,0 +1,163 @@
+/* content */
+
+
+/* 导航 */
+
+#content {
+    margin-bottom: 50px;
+}
+
+#content .nav_border {
+    width: 100%;
+    border-bottom: 1px solid #eee;
+}
+
+#content .inner {
+    width: 1190px;
+}
+
+#content .inner .nav_det {
+    margin: 11px auto 10px auto;
+    height: 20px;
+}
+
+#content .inner .nav_det a {
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    color: #666;
+    float: left;
+}
+
+#content .inner .nav_det a:hover {
+    color: #0092d8;
+}
+
+#content .inner .nav_det a:last-child:hover {
+    color: #666;
+}
+
+#content .inner .nav_det i {
+    display: block;
+    float: left;
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    background: url(../img/atom_sprite.png) no-repeat -20px -20px;
+}
+
+
+/* 放大镜 */
+
+#content .wrap {
+    width: 1190px;
+    height: 632px;
+    /* margin: 0 auto; */
+    margin: 40px auto 60px auto;
+    position: relative;
+}
+
+#spic {
+    width: 500px;
+    height: 500px;
+    float: left;
+    position: relative;
+}
+
+#spic img {
+    width: 500px;
+    height: 500px;
+}
+
+#sf {
+    width: 209px;
+    height: 209px;
+    background-color: #0080dc;
+    opacity: .2;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    visibility: hidden;
+    cursor: move;
+}
+
+#bf {
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    left: 595px;
+    height: 500px;
+    width: 500px;
+    z-index: 99;
+    background-color: #fff;
+}
+
+#bf img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+#ulist {
+    clear: right;
+    margin-top: 30px;
+    padding-left: 50px;
+    height: 64px;
+    position: absolute;
+    left: 0px;
+    bottom: 15px;
+    overflow: hidden;
+}
+
+#list {
+    float: left;
+    margin-left: 18px;
+    width: 612px;
+    position: relative;
+}
+
+#list ul {
+    list-style: none;
+    float: left;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+#list ul li {
+    float: left;
+    width: 56px;
+    height: 56px;
+    padding-right: 6px;
+    cursor: pointer;
+    border: 2px solid #f60;
+    margin: 0 10px 0 0;
+    position: relative;
+    opacity: 1.0;
+}
+
+ul li img {
+    width: 60px;
+    height: 54px;
+    border: 1px solid #ccc;
+}
+
+#content .wrap .share {
+    clear: right;
+    overflow: hidden;
+    padding-left: 50px;
+    margin-top: 20px;
+    height: 18px;
+    position: absolute;
+    left: 20px;
+    bottom: -30px;
+}
+
+#content .wrap .share_list span {
+    display: block;
+    float: left;
+    font-size: 12px;
+    height: 18px;
+    line-height: 18px;
+    color: #333;
+}

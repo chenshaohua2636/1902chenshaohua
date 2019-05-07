@@ -1,0 +1,305 @@
+/* 明星单品 */
+
+#content .mingxing {
+    height: 68px;
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+#content .mingxing h2 {
+    height: 68px;
+    width: 160px;
+    margin: 0 auto;
+    text-indent: -100%;
+    overflow: hidden;
+    background: url(../img/index_title_sprite.png) no-repeat 0 0;
+    background-size: 160px 115px;
+}
+
+
+/* 第一个商品列表 */
+
+#content .product_list1 {
+    border: 1px solid #e0e0e0;
+    height: 680px;
+    position: relative;
+    margin-bottom: -1px;
+    overflow: hidden;
+}
+
+#content .product_list1 .tehui {
+    position: absolute;
+    top: 340px;
+    right: 0;
+    color: #fff;
+    font-size: 12px;
+    height: 29px;
+    line-height: 29px;
+    padding: 0 20px;
+    z-index: 10;
+    text-align: center;
+    background: #ff6600;
+}
+
+#content .product_list1 .product1 {
+    position: absolute;
+    left: -1px;
+    top: -1px;
+}
+
+#content .product_list1 .product1 a {
+    display: block;
+    width: 600px;
+    height: 680px;
+}
+
+#content .product_list1 .product1 a img {
+    width: 500px;
+    height: 590px;
+    margin: 35px auto 10px;
+}
+
+#content .product_list1 .product2,
+#content .product_list1 .product3,
+#content .product_list1 .product4,
+#content .product_list1 .product5 {
+    width: 300px;
+    height: 340px;
+    position: absolute;
+    border: 1px solid #e0e0e0;
+}
+
+#content .product_list1 .product2 {
+    top: -1px;
+    left: 600px;
+}
+
+#content .product_list1 .product3 {
+    top: -1px;
+    left: 901px;
+}
+
+#content .product_list1 .product4 {
+    left: 600px;
+    top: 340px;
+}
+
+#content .product_list1 .product5 {
+    top: 340px;
+    left: 901px;
+}
+
+#content .product_list1 .product1 a,
+#content .product_list1 .product2 a,
+#content .product_list1 .product3 a,
+#content .product_list1 .product4 a,
+#content .product_list1 .product5 a {
+    display: block;
+}
+
+#content .product_list1 .product2 a img,
+#content .product_list1 .product3 a img,
+#content .product_list1 .product4 a img,
+#content .product_list1 .product5 a img {
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin: 35px auto 40px;
+}
+
+#content .product_list1 .product1 a span,
+#content .product_list1 .product2 a span,
+#content .product_list1 .product3 a span,
+#content .product_list1 .product4 a span,
+#content .product_list1 .product5 a span {
+    display: block;
+    font-size: 14px;
+    line-height: 14px;
+    height: 14px;
+    color: #333;
+    text-align: center;
+}
+
+#content .product_list1 .product1 a:hover span,
+#content .product_list1 .product2 a:hover span,
+#content .product_list1 .product3 a:hover span,
+#content .product_list1 .product4 a:hover span,
+#content .product_list1 .product5 a:hover span {
+    color: #f30;
+}
+
+
+/* 第二个商品列表 */
+
+#content .product_list2 {
+    border: 1px solid #e0e0e0;
+    height: 680px;
+    position: relative;
+    margin-bottom: -1px;
+    overflow: hidden;
+}
+
+#content .product_list2 .product1 {
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    border: 1px solid #e0e0e0;
+    width: 600px;
+    height: 340px;
+}
+
+#content .product_list2 .product1 img {
+    width: 540px;
+    height: 280px;
+    margin: 28px auto;
+}
+
+#content .product_list2 .product2 {
+    width: 600px;
+    height: 680px;
+    position: absolute;
+    left: 600px;
+    top: -1px;
+    border: 1px solid #e0e0e0;
+}
+
+#content .product_list2 .product2 img {
+    width: 500px;
+    height: 590px;
+    margin: 35px auto 10px;
+}
+
+#content .product_list2 .product3,
+#content .product_list2 .product4 {
+    width: 300px;
+    height: 340px;
+    position: absolute;
+}
+
+#content .product_list2 .product3 {
+    top: 340px;
+    left: -1px;
+    border: 1px solid #e0e0e0;
+}
+
+#content .product_list2 .product4 {
+    top: 340px;
+    left: 300px;
+}
+
+#content .product_list2 .product1 a,
+#content .product_list2 .product2 a,
+#content .product_list2 .product3 a,
+#content .product_list2 .product4 a {
+    display: block;
+}
+
+#content .product_list2 .product3 img,
+#content .product_list2 .product4 img {
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin: 35px auto 40px;
+}
+
+#content .product_list2 .product1 a span,
+#content .product_list2 .product2 a span,
+#content .product_list2 .product3 a span,
+#content .product_list2 .product4 a span {
+    display: block;
+    font-size: 14px;
+    line-height: 14px;
+    height: 14px;
+    color: #333;
+    text-align: center;
+}
+
+#content .product_list2 .product1 a span {
+    position: relative;
+    left: 0px;
+    top: -30px;
+}
+
+#content .product_list2 .product1 a:hover span,
+#content .product_list2 .product2 a:hover span,
+#content .product_list2 .product3 a:hover span,
+#content .product_list2 .product4 a:hover span {
+    color: #f30;
+}
+
+
+/* 会员专区 */
+
+#content .vip {
+    height: 39px;
+    margin-top: 80px;
+    margin-bottom: 55px;
+}
+
+#content .vip h2 {
+    height: 39px;
+    width: 160px;
+    margin: 0 auto;
+    text-indent: -100%;
+    overflow: hidden;
+    background: url(../img/index_title_sprite.png) no-repeat 0 -75px;
+    background-size: 160px 115px;
+}
+
+#content .vip a {
+    display: block;
+    font-size: 12px;
+    line-height: 12px;
+    margin: 20px auto 40px;
+    text-align: center;
+    color: #999;
+}
+
+#content .vip a:hover {
+    color: #f30;
+}
+
+#content .vip_list {
+    border: 1px solid #e0e0e0;
+    overflow: hidden;
+    margin-bottom: 120px;
+}
+
+#content .vip_list ul {
+    height: 420px;
+}
+
+#content .vip_list li {
+    float: left;
+    width: 298px;
+    height: 420px;
+    border-right: 1px solid #e0e0e0;
+}
+
+#content .vip_list li:nth-child(4) {
+    border-right: 0;
+}
+
+#content .vip_list li a {
+    display: block;
+}
+
+#content .vip_list li a img {
+    display: block;
+    width: 200px;
+    height: 300px;
+    margin: 30px auto 10px;
+}
+
+#content .vip_list .btn {
+    color: #333;
+    margin: 0 auto;
+    display: block;
+    width: 118px;
+    height: 38px;
+    line-height: 38px;
+    border: 1px solid #c8c8c8;
+    border-radius: 2px;
+    text-align: center;
+    padding: 0;
+}

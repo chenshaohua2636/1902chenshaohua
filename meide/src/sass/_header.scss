@@ -1,0 +1,223 @@
+    @charset "utf-8";
+    $header_height:44px;
+    $float_left:left;
+    $float_right:right;
+    body {
+        font-size: 12px;
+    }
+    
+    #header {
+        height: $header_height;
+        background: #0092d8;
+        // logo
+        .logo {
+            float: $float_left;
+            a {
+                display: block;
+                height: $header_height;
+                width: 120px;
+                background: url(../img/index_service_sprite_v3.png) no-repeat -80px 0px;
+                background-size: 200px 80px;
+            }
+        }
+        //left nav
+        .nav_right {
+            float: $float_right;
+            li {
+                position: relative;
+                a {
+                    i {
+                        position: relative;
+                        top: 13px;
+                        left: 0;
+                        display: block;
+                        width: 20px;
+                        height: 20px;
+                        background: url(../img/index_sprite.png) no-repeat
+                    }
+                }
+            }
+            //search
+            li:nth-child(1) {
+                a {
+                    display: block;
+                    width: 270px;
+                    background: #fff;
+                    padding: 0;
+                    i {
+                        float: $float_left;
+                        background-position: -66px -215px;
+                        background-color: #fff;
+                        margin: 0 0 0 5px;
+                    }
+                    input {
+                        float: $float_right;
+                        height: $header_height;
+                        width: 240px;
+                        border: 0;
+                        padding: 0;
+                    }
+                }
+            }
+            //shaoyishao
+            li:nth-child(2) {
+                a {
+                    i {
+                        background-position: -120px -215px;
+                    }
+                }
+                .shaoYiShao {
+                    display: none;
+                    position: absolute;
+                    top: 44px;
+                    left: -229px;
+                    // right: 86px;
+                }
+            }
+            //shopping car
+            li:nth-child(3) {
+                a {
+                    i {
+                        background-position: -146px -215px;
+                    }
+                }
+                .gouWuChe {
+                    display: none;
+                    width: 354px;
+                    height: 72px;
+                    background: #fff;
+                    position: absolute;
+                    right: 0px;
+                    top: 44px;
+                    border: 1px #ccc solid;
+                    box-shadow: 0px 0px 2px #888888;
+                    text-align: center;
+                    a {
+                        display: inline;
+                        color: #0092d8;
+                        padding: 0;
+                        line-height: 72px;
+                    }
+                }
+            }
+            //denglu wode
+            li:nth-child(4) {
+                a {
+                    color: #fff;
+                    i {
+                        display: inline-block;
+                        top: 6px;
+                        padding: 0 2px 0 2px;
+                        background-position: -35px -216px;
+                    }
+                }
+                .woDe {
+                    display: none;
+                    position: absolute;
+                    top: 44px;
+                    right: 5px;
+                    width: 289px;
+                    border: 1px solid #222;
+                    background: #fff;
+                    li {
+                        float: none;
+                        a {
+                            padding: 0;
+                            display: block;
+                            width: 289px;
+                            height: 48px;
+                            color: #333;
+                            position: relative;
+                            border-bottom: 1px solid lightgray;
+                            i {
+                                display: inline-block;
+                                position: absolute;
+                                top: 16px;
+                                left: 10px;
+                                width: 12px;
+                                height: 12px;
+                                background: url(../img/atom_sprite.png) no-repeat -284px -44px;
+                            }
+                            span {
+                                padding-left: 35px;
+                                font-size: 14px;
+                            }
+                        }
+                        a:hover {
+                            background: #f3f3f3;
+                        }
+                    }
+                }
+            }
+            li:nth-child(2):hover {
+                .shaoYiShao {
+                    display: block;
+                }
+            }
+            li:nth-child(3):hover {
+                .gouWuChe {
+                    display: block;
+                }
+            }
+            li:nth-child(4):hover {
+                .woDe {
+                    display: block;
+                    a {
+                        color: #333;
+                    }
+                }
+            }
+        }
+        //nav
+        li {
+            float: $float_left;
+            a {
+                text-decoration: none;
+                display: block;
+                height: $header_height;
+                line-height: $header_height;
+                padding: 0 30px;
+                color: #a3c3e6;
+            }
+        }
+        li:hover {
+            a {
+                color: #fff;
+            }
+        }
+    }
+    
+    //tong zhi
+    #announcement {
+        height: 16px;
+        background: rgb(0, 59, 102);
+        line-height: 16px;
+        font-size: 12px;
+        color: #fff;
+        text-align: center;
+        padding: 4px;
+    }
+    
+    // tong zhi xia mian de
+    #announcement_bottom {
+        height: 40px;
+        border-bottom: 1px solid black;
+        .inner {
+            width: 1200px;
+            margin: 0 auto;
+            div {
+                float: left;
+                line-height: 40px;
+                width: 20%;
+                text-align: center;
+                i {
+                    display: inline-block;
+                    width: 40px;
+                    height: 40px;
+                    background: url(../img/index_service_sprite_v3.png) no-repeat;
+                    background-size: 200px 80px;
+                    vertical-align: top;
+                }
+            }
+        }
+    }
