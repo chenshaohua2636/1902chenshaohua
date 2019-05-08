@@ -11,9 +11,13 @@
     <title>美的首页</title>
 
     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/content.css">
     <link rel="stylesheet" href="./css/footer.css">
+    <script src="./script/js/jquery.js"></script>
+    <!-- <script src="./script/js/index.js"></script>
+    <script src="./script/js/move.js"></script> -->
 </head>
 
 <body>
@@ -46,15 +50,17 @@
         <!-- nav-right -->
         <div class="nav_right">
             <ul>
-                <li>
+                <li id="search">
                     <a href="#">
-                        <i></i>
+                        <i class="search_i"></i>
                         <form action="">
-                            <input type="text" placeholder="五一提前购">
+                            <input type="text" placeholder="五一提前购" class="search_input">
                         </form>
+
                     </a>
 
                 </li>
+
                 <li>
                     <a href="#"><i></i></a>
                     <div class="shaoYiShao">
@@ -826,37 +832,39 @@
                         </li>
                         <li>
                             <a href="#">
-                                <img src="https://pic.midea.cn/h5/pic/201904/527b41213c7e.jpg?x-oss-process=image/format,webp/quality,Q_90&@100Q.jpg" alt="">
+                                <img src="https://pic.midea.cn/h5/pic/201904/d14d0d53407e.png?x-oss-process=image/format,webp/quality,Q_90&@100Q.png" alt="">
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <img src="https://pic.midea.cn/h5/pic/201904/527b41213c7e.jpg?x-oss-process=image/format,webp/quality,Q_90&@100Q.jpg" alt="">
+                                <img src="https://pic.midea.cn/h5/pic/201904/08e2674860a5.png?x-oss-process=image/format,webp/quality,Q_90&@100Q.png" alt="">
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <img src="https://pic.midea.cn/h5/pic/201904/527b41213c7e.jpg?x-oss-process=image/format,webp/quality,Q_90&@100Q.jpg" alt="">
+                                <img src="https://pic.midea.cn/h5/pic/201905/0107f0a07873.jpg?x-oss-process=image/format,webp/quality,Q_90&@100Q.jpg" alt="">
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <img src="https://pic.midea.cn/h5/pic/201904/527b41213c7e.jpg?x-oss-process=image/format,webp/quality,Q_90&@100Q.jpg" alt="">
+                                <img src="https://pic.midea.cn/h5/pic/201905/eb8f67c94be9.png?x-oss-process=image/format,webp/quality,Q_90&@100Q.png" alt="">
                             </a>
                         </li>
                     </ul>
-                    <!-- <div class="button">
-                        <ul>
-                            <li>
-                                <a href="#"></a>
-                            </li>
-                        </ul>
-                    </div> -->
+                    <div class="button">
+                        <ol>
+                            <li class="active"></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ol>
+                    </div>
                     <div class="lt_left">
-                        <a href="#"></a>
+                        <a href="javascript:;"></a>
                     </div>
                     <div class="gt_right">
-                        <a href="#"></a>
+                        <a href="javascript:;"></a>
                     </div>
                 </div>
             </div>
@@ -1022,6 +1030,10 @@
                 </p>
             </div>
         </div>
+
+        <script src="./script/js/index.js"></script>
+        <!-- <script src="./script/js/banner.js"></script> -->
+
     </footer>
 </body>
 

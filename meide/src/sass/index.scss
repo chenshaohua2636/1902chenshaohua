@@ -1,5 +1,4 @@
 @charset "utf-8";
-@import "header";
 $imgwidth:1200px;
 #banner {
     .inner {
@@ -54,6 +53,7 @@ $imgwidth:1200px;
                         background: #fff;
                         border-top: 1px solid #f4f4f4;
                         box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.1);
+                        z-index: 10;
                         .list1 {
                             float: left;
                             width: 204px;
@@ -216,6 +216,38 @@ $imgwidth:1200px;
                     }
                 }
             }
+            .button {
+                height: 35px;
+                position: absolute;
+                bottom: 0;
+                left: 220px;
+                width: 980px;
+                right: 0;
+                text-align: center;
+                ol {
+                    display: inline-block;
+                    padding: 0 8px;
+                    min-width: 110px;
+                    height: 36px;
+                    overflow: hidden;
+                    text-align: center;
+                    border-radius: 20px;
+                    .active {
+                        background: #fff;
+                    }
+                    li {
+                        display: inline-block;
+                        margin: 10px 4px 10px 3px;
+                        background-color: #D0CECE;
+                        border: #989696 solid 1px;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        width: 10px;
+                        height: 10px;
+                        cursor: pointer;
+                    }
+                }
+            }
             .lt_left {
                 position: absolute;
                 left: 220px;
@@ -266,6 +298,12 @@ $imgwidth:1200px;
                         width: 200px;
                         height: 180px;
                         margin: 15px auto 5px;
+                        position: relative;
+                        top: 0px;
+                        transition: top 0.2s;
+                    }
+                    img:hover {
+                        top: -5px;
                     }
                 }
             }
