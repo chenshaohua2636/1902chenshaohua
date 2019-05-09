@@ -68,10 +68,6 @@
 
 /* 合作号 */
 
-#content .inner .content_right .login {
-    /* display: none; */
-}
-
 #content .inner .content_right .hezuohao {
     padding-bottom: 20px;
 }
@@ -79,6 +75,12 @@
 #content .inner .content_right .hezuohao span {
     font-size: 20px;
     color: #666;
+}
+
+#error {
+    display: block;
+    font-size: 16px !important;
+    color: #f30 !important;
 }
 
 #content .inner .content_right .hezuohao ul {
@@ -210,20 +212,26 @@
     font-size: 12px;
 }
 
-#content .inner .content_right .registor .reg_form .reg_tel a {
+.error {
+    color: #f30;
+}
+
+#content .inner .content_right .registor .reg_form .reg_yanzheng #yanzheng {
     display: block;
-    height: 39px;
+    height: 42px;
     line-height: 40px;
     text-align: center;
     color: #3f3f3f;
     white-space: nowrap;
     position: absolute;
-    top: 0;
-    right: 1px;
+    top: 64px;
+    right: 42px;
     width: 80px;
     padding: 0 10px;
+    border: none;
     border-left: 1px solid #c8c8c8;
     font-size: 12px;
+    cursor: pointer;
 }
 
 #content .inner .content_right .registor .reg_form .reg_tips {
@@ -251,7 +259,7 @@
     color: #0086e6;
 }
 
-#content .inner .content_right .registor .reg_form .reg_btn a {
+#content .inner .content_right .registor .reg_form .reg_btn input {
     display: block;
     width: 300px;
     height: 40px;

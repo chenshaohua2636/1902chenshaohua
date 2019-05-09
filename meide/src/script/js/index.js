@@ -1,3 +1,19 @@
+//搜索框
+// (function() {
+//     var search = $('#search');
+//     var a = $('#search a')
+//     var i = $('#search a i')
+//     var ipt = $('#search a input')
+//     search.on('mouseover', function() {
+//         // search.stop(true).animate({
+//         //     width: 250 + 'px'
+//         // })
+//         ipt.css('width', '250px')
+//         i.css({ 'background-position-x': '-66' + 'px', 'background-position-y': '-215' + 'px', 'marginLeft': '5' + 'px' });
+
+//     })
+// })();
+//轮播图
 (function() {
     //1.获取元素
 
@@ -43,7 +59,6 @@
         $($picUl).stop(true).animate({
             left: -($num + 1) * $liWidth
         }, function() {
-            // if ($num > $btnLi.length - 1) {
 
             if ($picUl.offset().left <= -$liWidth * ($btnLi.length)) {
                 $picUl.css({ "left": -$liWidth + 'px' });
@@ -70,7 +85,21 @@
     $oLunbo.on('mouseout', function() {
         $btnLeft.hide();
         $btnRight.hide();
-        clearInterval(timer);
+        timer = setInterval(function() {
+            $btnRight.on('click', function() {
+                if ($bstop) {
+                    $bstop = false;
+                    $num++;
+                    tabSwitch();
+                    if ($num == $btnLi.length) {
+                        $($btnLi[0]).addClass('active').siblings().removeClass('active');;
+                    } else {
+                        $($btnLi[$num]).addClass('active').siblings().removeClass('active');;
+                    }
+                }
+
+            }());
+        }, 2000);
     });
     //右箭头添加点击事件
     $btnRight.on('click', function() {
@@ -81,9 +110,9 @@
             $num++;
             tabSwitch();
             if ($num == $btnLi.length) {
-                $($btnLi[0]).addClass('active').siblings().removeClass('active');
+                $($btnLi[0]).addClass('active').siblings().removeClass('active');;
             } else {
-                $($btnLi[$num]).addClass('active').siblings().removeClass('active');
+                $($btnLi[$num]).addClass('active').siblings().removeClass('active');;
             }
         }
     });
@@ -105,17 +134,25 @@
     //定时器
     timer = setInterval(function() {
         $btnRight.on('click', function() {
-            var $index = $btnLi.index($(this));
+
             if ($bstop) {
                 $bstop = false;
                 $num++;
                 tabSwitch();
-                if ($index == $btnLi.length) {
+                if ($num == $btnLi.length) {
                     $($btnLi[0]).addClass('active').siblings().removeClass('active');;
                 } else {
-                    $($btnLi[$index]).addClass('active').siblings().removeClass('active');;
+                    $($btnLi[$num]).addClass('active').siblings().removeClass('active');;
                 }
             }
         }());
     }, 2000);
+})();
+//懒加载
+(function() {
+    $(function() {
+        $("img.lazy").lazyload({
+            effect: "fadeIn"
+        });
+    });
 })();

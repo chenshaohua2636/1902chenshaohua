@@ -9,6 +9,8 @@
     <link rel="shortcut icon" href="https://pic.midea.cn/pc/img/common/favicon.ico">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/login.css">
+    <script src="./script//thirdplugins/jquery.js"></script>
+    <script src="./script/thirdplugins/jquery.validate.js"></script>
 </head>
 
 <body>
@@ -28,6 +30,7 @@
                     <!-- 合作号登录 -->
                     <div class="hezuohao">
                         <span>使用合作号登录</span>
+
                         <ul>
                             <li>
                                 <a href="#"></a>
@@ -41,14 +44,15 @@
                     <div class="biaodan">
                         <span>账号密码登录</span>
                         <form action="">
+                            <span id="error"></span>
                             <div class="tel">
-                                <input type="tel" placeholder="手机号">
+                                <input id="usertel" type="tel" name="username" placeholder="手机号">
                             </div>
                             <div class="password">
-                                <input type="password" placeholder="密码">
+                                <input id="userpassword" name="password" type="password" placeholder="密码">
                             </div>
                             <div class="btn">
-                                <a href="javascript:;" class="login_btn">登录</a>
+                                <a href="javascript:;" class="login_btn" id="btn_login">登录</a>
                             </div>
                             <div class="biaodan_footer">
                                 <a href="javascript:;">短信验证登录</a>
@@ -64,23 +68,26 @@
                 <div class="registor">
                     <div class="registor_tel">使用手机号注册</div>
                     <div class="reg_form">
-                        <form action="">
+                        <form action="../php/reg.php" method="POST" id="form1">
                             <div class="reg_tel">
-                                <input type="text" placeholder="手机号">
-                                <a href="javascript:;">获取验证码</a>
-                                <span></span>
+                                <input type="text" placeholder="手机号" name="username">
+                                <span class="error"></span>
                             </div>
+                            <div class="reg_yanzheng">
+                                <input type="button" value="获取验证码" name="yanzheng" id="yanzheng">
+                            </div>
+
                             <div class="reg_ver">
-                                <input type="text" placeholder="验证码">
-                                <span></span>
+                                <input type="text" placeholder="验证码" name="yanzhengma" id="yanzhengma">
+                                <span id="result" class="error"></span>
                             </div>
                             <div class="reg_password">
-                                <input type="password" placeholder="密码">
-                                <span></span>
+                                <input type="password" id="password" name="password" placeholder="密码">
+                                <span class="error"></span>
                             </div>
                             <div class="reg_queren">
-                                <input type="password" placeholder="确认密码">
-                                <span></span>
+                                <input type="password" name="repass" id="repass" placeholder="确认密码">
+                                <span class="error"></span>
                             </div>
                             <div class="reg_tips"><span>密码长度必须在8位以上，含大小写字母、数字、符号至少三种</span></div>
                             <div class="reg_checked">
@@ -88,7 +95,7 @@
                                 <span>同意<a href="#">《美的官方商城用户注册协议》</a></span>
                             </div>
                             <div class="reg_btn">
-                                <a href="javascript:;">注册</a>
+                                <input type="submit" value="注册" name="submit">
                             </div>
                             <div class="reg_yiyou">
                                 <a href="javascript:;" id="log">已有账号？请登录</a>
@@ -98,20 +105,7 @@
                 </div>
             </div>
         </div>
-        <script>
-            var a = document.querySelector('#zhuce');
-            var log = document.querySelector('#log');
-            var reg = document.querySelector('.registor');
-            var login = document.querySelector('.login')
-            a.onclick = function() {
-                reg.style.display = 'block';
-                login.style.display = 'none';
-            }
-            log.onclick = function() {
-                reg.style.display = 'none';
-                login.style.display = 'block';
-            }
-        </script>
+
     </section>
     <!-- footer -->
     <footer id="footer">
@@ -122,6 +116,7 @@
             </div>
         </div>
     </footer>
+    <script src="./script/js/login.js"></script>
 </body>
 
 </html>
