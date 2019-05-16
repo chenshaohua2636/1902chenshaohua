@@ -1,18 +1,3 @@
-//搜索框
-// (function() {
-//     var search = $('#search');
-//     var a = $('#search a')
-//     var i = $('#search a i')
-//     var ipt = $('#search a input')
-//     search.on('mouseover', function() {
-//         // search.stop(true).animate({
-//         //     width: 250 + 'px'
-//         // })
-//         ipt.css('width', '250px')
-//         i.css({ 'background-position-x': '-66' + 'px', 'background-position-y': '-215' + 'px', 'marginLeft': '5' + 'px' });
-
-//     })
-// })();
 //轮播图
 (function() {
     //1.获取元素
@@ -148,11 +133,39 @@
         }());
     }, 2000);
 })();
-//懒加载
+//数据渲染
 (function() {
-    $(function() {
-        $("img.lazy").lazyload({
-            effect: "fadeIn"
-        });
+    $.ajax({
+        url: 'http://10.31.163.21/project/csh/1902chenshaohua/meide/php/pic.php',
+        dataType: 'json',
+        success: function(data) {
+            console.log(data);
+            var $htmlStr = '';
+            $.each(data, function(index, value) {
+                $htmlStr += `
+                <li>
+                        <a href="details.html?sid=${value.sid}">
+                            <img class="lazy" data-original="${value.url}" alt="" >
+                            <span>${value.title}</span><br/>
+                            <span>￥${value.price}</span>
+                        </a>
+                    </li>
+                `;
+            });
+
+            $('.product_list1 ul').html($htmlStr);
+            $(function() {
+                $("img.lazy").lazyload({
+                    effect: "fadeIn"
+                });
+            });
+        }
     });
 })();
+// <li>
+//     <a href="details.html?sid=${value.picid}">
+//         <img src="${value.url}">
+//         <p>${value.title}</p>
+//         <span>￥${value.price}</span>    
+//     </a>
+// </li>

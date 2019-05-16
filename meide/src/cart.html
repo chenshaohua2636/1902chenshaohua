@@ -7,9 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>购物车</title>
     <link rel="shortcut icon" href="https://pic.midea.cn/pc/img/common/favicon.ico">
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/cart.css">
+    <link rel="stylesheet" href="http://10.31.163.21/project/csh/1902chenshaohua/meide/src/css/reset.css">
+    <link rel="stylesheet" href="http://10.31.163.21/project/csh/1902chenshaohua/meide/src/css/header.css">
+    <link rel="stylesheet" href="http://10.31.163.21/project/csh/1902chenshaohua/meide/src/css/cart.css">
+
 </head>
 
 <body>
@@ -142,7 +143,8 @@
                     <ul>
                         <li>
                             <div class="checkedbox">
-                                <div class="checked"></div>
+                                <input class="checked allchecked" type="checkbox" checked="checkbox">
+
                             </div>
                             全选
                         </li>
@@ -159,40 +161,51 @@
                             <div class="cart_item">
                                 <div class="item_title">
                                     <div class="checkedbox">
-                                        <div class="checked"></div>
+                                        <input class="checked" type="checkbox" checked="checkbox">
+
                                     </div>
                                     <div class="guanfang_icon">
                                         <i></i> 美的官网商城
                                     </div>
                                 </div>
-                                <div class="item_product">
-                                    <div></div>
 
+                                <!--购物车为空时-->
+                                <div class="cart_none">
+                                    <div class="empty_none_w">
+                                        购物车空空如也~，快去挑选满意的商品吧~
+                                        <a href="index123.html">去逛逛吧></a>
+                                    </div>
+                                </div>
+
+                                <div class="item_product" style="display: none;">
+                                    <div></div>
                                     <div class="product_lists">
                                         <div class="product_warp">
                                             <!-- 复选框 -->
                                             <div class="choose">
                                                 <div class="checkedbox">
-                                                    <div class="checked"></div>
+                                                    <input class="checked" type="checkbox" checked="checkbox">
+
                                                 </div>
                                             </div>
                                             <!-- 商品图片 -->
                                             <div class="product_pic">
-                                                <img src="https://pic.midea.cn/ImageStore/155533/pic/5942ce6dc79e9859A32081/5942ce6dc79e9859A32081_120*120.jpg?x-oss-process=image/format,webp/quality,Q_90&" alt="">
+                                                <img src="" alt="">
                                             </div>
                                             <!-- 商品信息 -->
                                             <div class="product_xinxi">
                                                 <a href="#">
-                                                    【时尚范】电饭煲 4L容量 微压焖香煮 聚能釜内胆 MB-FB40Easy501</a>
+
+                                                </a>
                                             </div>
                                             <!-- 商品规格 -->
                                             <div class="product_guige">
-                                                <span>4L</span>
+                                                <span></span>
                                             </div>
                                             <!-- 商品价格 -->
                                             <div class="product_price">
                                                 <del>369.00</del>
-                                                <span>299.00</span>
+                                                <span class="danjia"></span>
                                                 <div>
                                                     <span>本周特惠</span>
                                                 </div>
@@ -200,28 +213,32 @@
                                             <!-- 商品数量 -->
                                             <div class="product_num">
                                                 <div class="duoshao">
-                                                    <span>
+                                                    <span class="down">
                                                             <i></i>
                                                         </span>
                                                     <input type="text" value="1">
-                                                    <span>
+                                                    <span class="add">
                                                             <i></i>
                                                         </span>
                                                 </div>
                                             </div>
                                             <!-- 小计 -->
                                             <div class="product_sum">
-                                                <div class="sum">299.00</div>
+                                                <div class="sum"></div>
                                             </div>
                                             <!-- 操作 -->
                                             <div class="product_caozuo">
                                                 <span>移入收藏夹</span>
-                                                <span>删除</span>
+                                                <span class="delete">删除</span>
                                             </div>
                                         </div>
 
                                     </div>
                                 </div>
+
+
+
+
                             </div>
                         </div>
                     </div>
@@ -230,27 +247,32 @@
 
         </div>
     </section>
+    <div id="kongbai"></div>
     <footer id="footer">
         <div class="inner">
             <div class="cart_bottom">
                 <div class="cart_bottom_left">
                     <div class="choose">
                         <div class="checkedbox">
-                            <div class="checked"></div>
+                            <input class="checked allchecked" type="checkbox" checked="checkbox">
+
                         </div>
                     </div>
                     <span>全选</span>
-                    <div class="del">删除</div>
+                    <div class="del">
+                        <span>删除所有选中的商品</span>
+
+                    </div>
                     <div class="move">移入收藏夹</div>
                     <div class="clear">清除失效商品</div>
                 </div>
                 <div class="cart_bottom_right">
                     <div class="right_choose">
-                        <span>已选择<i>1</i>件</span>
+                        <span>已选择<i>0</i>件</span>
                     </div>
                     <div class="right_price">
                         <div class="heji">
-                            <span class="right_sum">合计：<i>299.00</i></span>
+                            <span class="right_sum">合计：<i>0.00</i></span>
                         </div>
                         <div class="yunfei">(不含运费)</div>
                     </div>
@@ -259,6 +281,9 @@
             </div>
         </div>
     </footer>
+    <script src="http://10.31.163.21/project/csh/1902chenshaohua/meide/src/script/thirdplugins/jquery.js"></script>
+    <script src="http://10.31.163.21/project/csh/1902chenshaohua/meide/src/script/thirdplugins/jquery.cookie.js"></script>
+    <script src="http://10.31.163.21/project/csh/1902chenshaohua/meide/src/script/js/cart.js"></script>
 </body>
 
 </html>

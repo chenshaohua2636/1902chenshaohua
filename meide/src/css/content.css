@@ -29,12 +29,79 @@
 
 /* 第一个商品列表 */
 
+
+/* 拼接的数据 */
+
 #content .product_list1 {
     border: 1px solid #e0e0e0;
+    border-top: none;
     height: 680px;
     position: relative;
     margin-bottom: -1px;
     overflow: hidden;
+}
+
+#content .product_list1 ul {
+    height: 680px;
+    width: 1198px;
+}
+
+#content .product_list1 ul li {
+    display: block;
+    float: left;
+    position: relative;
+}
+
+#content .product_list1 ul li:first-child a {
+    float: left;
+    display: block;
+    width: 600px;
+    height: 680px;
+}
+
+#content .product_list1 ul li:first-child a img {
+    width: 500px;
+    height: 590px;
+    margin: 35px auto 10px;
+}
+
+#content .product_list1 ul li:first-child a span:nth-child(2) {
+    display: none;
+}
+
+#content .product_list1 ul li a {
+    display: block;
+    width: 297px;
+    height: 340px;
+    border: 1px solid #e0e0e0;
+    border-left: none;
+    border-bottom: none;
+}
+
+#content .product_list1 ul li:nth-child(3) a,
+#content .product_list1 ul li:nth-child(5) a {
+    border-right: none;
+    padding-right: 2px;
+}
+
+#content .product_list1 ul li:hover a span {
+    color: #f30;
+}
+
+#content .product_list1 ul li a img {
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin: 35px auto 40px;
+}
+
+#content .product_list1 ul li a span {
+    display: block;
+    font-size: 14px;
+    line-height: 14px;
+    height: 14px;
+    color: #333;
+    text-align: center;
 }
 
 #content .product_list1 .tehui {
@@ -49,93 +116,6 @@
     z-index: 10;
     text-align: center;
     background: #ff6600;
-}
-
-#content .product_list1 .product1 {
-    position: absolute;
-    left: -1px;
-    top: -1px;
-}
-
-#content .product_list1 .product1 a {
-    display: block;
-    width: 600px;
-    height: 680px;
-}
-
-#content .product_list1 .product1 a img {
-    width: 500px;
-    height: 590px;
-    margin: 35px auto 10px;
-}
-
-#content .product_list1 .product2,
-#content .product_list1 .product3,
-#content .product_list1 .product4,
-#content .product_list1 .product5 {
-    width: 300px;
-    height: 340px;
-    position: absolute;
-    border: 1px solid #e0e0e0;
-}
-
-#content .product_list1 .product2 {
-    top: -1px;
-    left: 600px;
-}
-
-#content .product_list1 .product3 {
-    top: -1px;
-    left: 901px;
-}
-
-#content .product_list1 .product4 {
-    left: 600px;
-    top: 340px;
-}
-
-#content .product_list1 .product5 {
-    top: 340px;
-    left: 901px;
-}
-
-#content .product_list1 .product1 a,
-#content .product_list1 .product2 a,
-#content .product_list1 .product3 a,
-#content .product_list1 .product4 a,
-#content .product_list1 .product5 a {
-    display: block;
-}
-
-#content .product_list1 .product2 a img,
-#content .product_list1 .product3 a img,
-#content .product_list1 .product4 a img,
-#content .product_list1 .product5 a img {
-    display: block;
-    width: 200px;
-    height: 200px;
-    margin: 35px auto 40px;
-}
-
-#content .product_list1 .product1 a span,
-#content .product_list1 .product2 a span,
-#content .product_list1 .product3 a span,
-#content .product_list1 .product4 a span,
-#content .product_list1 .product5 a span {
-    display: block;
-    font-size: 14px;
-    line-height: 14px;
-    height: 14px;
-    color: #333;
-    text-align: center;
-}
-
-#content .product_list1 .product1 a:hover span,
-#content .product_list1 .product2 a:hover span,
-#content .product_list1 .product3 a:hover span,
-#content .product_list1 .product4 a:hover span,
-#content .product_list1 .product5 a:hover span {
-    color: #f30;
 }
 
 

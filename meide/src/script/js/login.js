@@ -30,7 +30,7 @@
         var $password = $('#userpassword').val();
         $.ajax({
             type: 'post',
-            url: '../php/login.php',
+            url: 'http://10.31.163.21/project/csh/1902chenshaohua/meide/php/login.php',
             data: { //将用户名和密码传输给后端
                 name: $username,
                 pass: $password
@@ -47,64 +47,7 @@
         })
     });
 })();
-//注册验证
-(function() {
-    $(function() {
-        $('#form1').validate({
-            rules: {
-                username: {
-                    required: true,
-                    minlength: 11,
-                    isPhone: true,
-                    remote: { //将前端的name给后端
-                        url: "../php/reg.php", //后台处理程序
-                        type: "post" //数据发送方式
-                    }
-                },
-                password: {
-                    required: true,
-                    minlength: 6
-                },
-                repass: {
-                    required: true,
-                    equalTo: '#password'
-                },
 
-            },
-            messages: {
-                username: {
-                    required: '手机号不能为空',
-                    minlength: '手机号格式不正确',
-                    isPhone: '手机号格式不正确',
-                    remote: '用户名已存在'
-                },
-                password: {
-                    required: '密码不能为空',
-                    minlength: '密码长度不够'
-                },
-
-                repass: {
-                    required: '密码重复不能为空',
-                    equalTo: '密码不一致'
-                },
-            }
-
-        });
-    });
-
-    $.validator.setDefaults({
-        /*添加校验成功后的执行函数--修改提示内容，并为正确提示信息添加新的样式(默认是valid)*/
-        success: function(span) {
-            span.text('√').css('color', 'green').addClass('valid');
-        }
-    });
-    //添加自定义验证手机号
-    jQuery.validator.addMethod("isPhone", function(value, element) {
-        var length = value.length;
-        var mobile = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/;
-        return this.optional(element) || (length == 11 && mobile.test(value));
-    }, "请填写正确的手机号码");
-})();
 //验证码 
 (function() {
     var yangzheng = $('#yanzheng');
@@ -143,4 +86,73 @@
         }
     });
 
+})();
+
+
+//注册验证
+(function() {
+    $(function() {
+        $('#form1').validate({
+            rules: {
+                username: {
+                    required: true,
+                    minlength: 11,
+                    isPhone: true,
+                    remote: { //将前端的name给后端
+                        url: "http://10.31.163.21/project/csh/1902chenshaohua/meide/php/reg.php", //后台处理程序
+                        type: "post" //数据发送方式
+                    }
+                },
+                yanzhengma: {
+                    required: true,
+                    equalTo: '#yanzheng'
+
+                },
+                password: {
+                    required: true,
+                    minlength: 6
+                },
+                repass: {
+                    required: true,
+                    equalTo: '#password'
+                },
+
+            },
+            messages: {
+                username: {
+                    required: '手机号不能为空',
+                    minlength: '手机号格式不正确',
+                    isPhone: '手机号格式不正确',
+                    remote: '用户名已存在'
+                },
+                yanzhengma: {
+                    required: '验证码不能为空',
+                    equalTo: '验证码不匹配'
+                },
+                password: {
+                    required: '密码不能为空',
+                    minlength: '密码长度不够'
+                },
+
+                repass: {
+                    required: '密码重复不能为空',
+                    equalTo: '密码不一致'
+                },
+            }
+
+        });
+    });
+
+    $.validator.setDefaults({
+        /*添加校验成功后的执行函数--修改提示内容，并为正确提示信息添加新的样式(默认是valid)*/
+        success: function(span) {
+            span.text('√').css('color', 'green').addClass('valid');
+        }
+    });
+    //添加自定义验证手机号
+    jQuery.validator.addMethod("isPhone", function(value, element) {
+        var length = value.length;
+        var mobile = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/;
+        return this.optional(element) || (length == 11 && mobile.test(value));
+    }, "请填写正确的手机号码");
 })();

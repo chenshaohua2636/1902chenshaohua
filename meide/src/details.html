@@ -8,10 +8,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>详情</title>
     <link rel="shortcut icon" href="https://pic.midea.cn/pc/img/common/favicon.ico">
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/details.css">
-    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="http://10.31.163.21/project/csh/1902chenshaohua/meide/src/css/reset.css">
+    <link rel="stylesheet" href="http://10.31.163.21/project/csh/1902chenshaohua/meide/src/css/header.css">
+    <link rel="stylesheet" href="http://10.31.163.21/project/csh/1902chenshaohua/meide/src/css/details.css">
+    <link rel="stylesheet" href="http://10.31.163.21/project/csh/1902chenshaohua/meide/src/css/footer.css">
+    <script src="http://10.31.163.21/project/csh/1902chenshaohua/meide/src/script/thirdplugins/jquery.js"></script>
+    <script src="http://10.31.163.21/project/csh/1902chenshaohua/meide/src/script/thirdplugins/jquery.cookie.js"></script>
 </head>
 
 <body>
@@ -125,7 +127,7 @@
                     <i></i>
                     <a href="#">电饭煲</a>
                     <i></i>
-                    <a>MB-FB40Easy501</a>
+                    <a class="bianhao">MB-FB40Easy501</a>
                 </div>
             </div>
 
@@ -135,21 +137,17 @@
         <div class="wrap">
             <div class="product_left">
                 <div id="smallpic">
-                    <img src="https://pic.midea.cn/ImageStore/155533/pic/5942ce6dc79e9859A32081/5942ce6dc79e9859A32081_530*530.jpg?x-oss-process=image/format,webp/quality,Q_90&" alt="">
+                    <img src="" alt="" id="smpic">
                     <div id="smallfang"></div>
                 </div>
 
                 <div id="bigfang">
-                    <img src="https://pic.midea.cn/ImageStore/155533/pic/5942ce6dc79e9859A32081/5942ce6dc79e9859A32081.jpg?x-oss-process=image/format,webp/quality,Q_90&" alt="" id="bigpic">
+                    <img src="" alt="" id="bigpic">
                 </div>
                 <div id="productlist">
                     <div id="list">
                         <ul>
-                            <li><img src="https://pic.midea.cn/ImageStore/155533/pic/5942ce6dc79e9859A32081/5942ce6dc79e9859A32081_120*120.jpg?x-oss-process=image/format,webp/quality,Q_90&" alt=""></li>
-                            <li><img src="https://pic.midea.cn/ImageStore/155533/pic/1785c732d26ff6b6A23423/1785c732d26ff6b6A23423_120*120.jpg?x-oss-process=image/format,webp/quality,Q_90&" alt=""></li>
-                            <li><img src="https://pic.midea.cn/ImageStore/155533/pic/4f38a96657d13ca5A19917/4f38a96657d13ca5A19917_120*120.jpg?x-oss-process=image/format,webp/quality,Q_90&" alt=""></li>
-                            <li><img src="https://pic.midea.cn/ImageStore/155533/pic/7815a04d148ec6a2A2408/7815a04d148ec6a2A2408_120*120.png?x-oss-process=image/format,webp/quality,Q_90&" alt=""></li>
-                            <li><img src="https://pic.midea.cn/ImageStore/155533/pic/8da1b669feb893b3A1197/8da1b669feb893b3A1197_120*120.jpg?x-oss-process=image/format,webp/quality,Q_90&" alt=""></li>
+
                         </ul>
                     </div>
                 </div>
@@ -169,7 +167,7 @@
             </div>
             <div class="product_right">
                 <h1>
-                    <span>自营</span> 【时尚范】电饭煲 4L容量 微压焖香煮 聚能釜内胆 MB-FB40Easy501
+                    <span>自营</span><b class="loadtitle">【时尚范】电饭煲 4L容量 微压焖香煮 聚能釜内胆 </b><em class="bianhao"> </em>
                 </h1>
                 <h5>
                     <span>极速保价</span> 匀火速热盘，高效速热；匠铜圆灶釜；远红外涂层，热量直达米芯；石锅饭、寿司饭
@@ -181,8 +179,7 @@
                 <!-- 价格 -->
                 <div class="product_price">
                     <div class="price">
-                        <span>￥</span>
-                        <b>299.00</b>
+                        <span>￥<b class="loadpcp">0.00</b></span>
                         <del>￥369.99</del>
                         <div class="bztehui">本周特惠</div>
                     </div>
@@ -214,11 +211,11 @@
                     <div class="shuliang">
                         <h3>数量</h3>
                         <div class="duoshao">
-                            <span>
+                            <span id="minus">
                                 <i></i>
                             </span>
-                            <input type="text" value="1">
-                            <span>
+                            <input type="text" value="1" id="number">
+                            <span id="add">
                                 <i></i>
                             </span>
                             <div></div>
@@ -266,12 +263,10 @@
                                 <div></div>
                             </div>
                         </div>
-                        <a href="javascript:;" class="jiaru_cart">加入购物车</a>
-                        <a href="javascript:;" class="lijigm">立即购买</a>
                     </div>
                     <!-- 加购按钮 -->
                     <div class="btn_list">
-                        <a href="javascript:;" class="jiaru_cart">加入购物车</a>
+                        <a href="javascript:;" class="jiaru_cart" id="join_cart">加入购物车</a>
                         <a href="javascript:;" class="lijigm">立即购买</a>
                     </div>
                     <div class="last_con">
@@ -345,6 +340,7 @@
             </div>
         </div>
     </footer>
+    <script src="http://10.31.163.21/project/csh/1902chenshaohua/meide/src/script/js/details.js"></script>
 </body>
 
 </html>

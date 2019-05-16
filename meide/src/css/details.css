@@ -87,7 +87,7 @@
 }
 
 #bigfang {
-    display: none;
+    visibility: hidden;
     position: absolute;
     overflow: hidden;
     left: 595px;
@@ -98,6 +98,8 @@
 }
 
 #bigfang img {
+    width: 1200px;
+    height: 1200px;
     position: absolute;
     left: 0px;
     top: 0px;
@@ -135,10 +137,14 @@
     height: 56px;
     padding-right: 6px;
     cursor: pointer;
-    border: 2px solid #f60;
+    border: 2px solid transparent;
     margin: 0 10px 0 0;
     position: relative;
     opacity: 1.0;
+}
+
+#list ul .active {
+    border: 2px solid #f60;
 }
 
 ul li img {
@@ -403,6 +409,15 @@ ul li img {
 
 #content .wrap .product_right .gspg .guige h3 {
     margin-top: 9px;
+}
+
+#content .wrap .product_right .gspg .guige .liang {
+    height: 26px;
+    line-height: 26px;
+    margin-bottom: 15px;
+    float: left;
+    margin-left: 10px;
+    cursor: pointer;
 }
 
 #content .wrap .product_right .gspg .guige span {
