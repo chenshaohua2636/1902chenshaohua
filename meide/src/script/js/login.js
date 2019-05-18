@@ -30,7 +30,7 @@
         var $password = $('#userpassword').val();
         $.ajax({
             type: 'post',
-            url: 'http://10.31.163.21/project/csh/1902chenshaohua/meide/php/login.php',
+            url: '../php/login.php',
             data: { //将用户名和密码传输给后端
                 name: $username,
                 pass: $password
@@ -41,7 +41,7 @@
                     $('#userpassword').val('');
                 } else { //成功,存cookie,跳转到首页
                     addCookie('UserName', $username, 7);
-                    location.href = '../src/index123.html';
+                    location.href = 'index.html';
                 }
             }
         })
@@ -99,7 +99,7 @@
                     minlength: 11,
                     isPhone: true,
                     remote: { //将前端的name给后端
-                        url: "http://10.31.163.21/project/csh/1902chenshaohua/meide/php/reg.php", //后台处理程序
+                        url: "../php/reg.php", //后台处理程序
                         type: "post" //数据发送方式
                     }
                 },

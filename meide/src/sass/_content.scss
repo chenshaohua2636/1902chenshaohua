@@ -1,0 +1,258 @@
+@charset "utf-8";
+
+/* 明星单品 */
+
+#content {
+    img {
+        position: relative;
+        top: 0px;
+        transition: top 0.2s;
+        &:hover {
+            top: -5px;
+        }
+    }
+    .mingxing {
+        height: 68px;
+        margin-top: 80px;
+        margin-bottom: 40px;
+        h2 {
+            height: 68px;
+            width: 160px;
+            margin: 0 auto;
+            text-indent: -100%;
+            overflow: hidden;
+            background: url(http://10.31.163.21/project/csh/1902chenshaohua/meide/src/img/index_title_sprite.png) no-repeat 0 0;
+            background-size: 160px 115px;
+        }
+    }
+    /* 第一个商品列表 */
+    /* 拼接的数据 */
+    .product_list1 {
+        border: 1px solid #e0e0e0;
+        border-top: none;
+        height: 680px;
+        position: relative;
+        margin-bottom: -1px;
+        overflow: hidden;
+        ul {
+            height: 680px;
+            width: 1198px;
+            li {
+                display: block;
+                float: left;
+                position: relative;
+                &:first-child a {
+                    float: left;
+                    display: block;
+                    width: 600px;
+                    height: 680px;
+                    img {
+                        width: 500px;
+                        height: 590px;
+                        margin: 35px auto 10px;
+                    }
+                    span:nth-child(2) {
+                        display: none;
+                    }
+                }
+                a {
+                    display: block;
+                    width: 297px;
+                    height: 340px;
+                    border: 1px solid #e0e0e0;
+                    border-left: none;
+                    border-bottom: none;
+                }
+                &:nth-child(3) a,
+                &:nth-child(5) a {
+                    border-right: none;
+                    padding-right: 2px;
+                }
+                &:hover a span {
+                    color: #f30;
+                }
+                a {
+                    img {
+                        display: block;
+                        width: 200px;
+                        height: 200px;
+                        margin: 35px auto 40px;
+                    }
+                    span {
+                        display: block;
+                        font-size: 14px;
+                        line-height: 14px;
+                        height: 14px;
+                        color: #333;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        .tehui {
+            position: absolute;
+            top: 340px;
+            right: 0;
+            color: #fff;
+            font-size: 12px;
+            height: 29px;
+            line-height: 29px;
+            padding: 0 20px;
+            z-index: 10;
+            text-align: center;
+            background: #ff6600;
+        }
+    }
+    /* 第二个商品列表 */
+    .product_list2 {
+        border: 1px solid #e0e0e0;
+        height: 680px;
+        position: relative;
+        margin-bottom: -1px;
+        overflow: hidden;
+        .product1 {
+            position: absolute;
+            left: -1px;
+            top: -1px;
+            border: 1px solid #e0e0e0;
+            width: 600px;
+            height: 340px;
+            img {
+                width: 540px;
+                height: 280px;
+                margin: 28px auto;
+            }
+        }
+        .product2 {
+            width: 600px;
+            height: 680px;
+            position: absolute;
+            left: 600px;
+            top: -1px;
+            border: 1px solid #e0e0e0;
+            img {
+                width: 500px;
+                height: 590px;
+                margin: 35px auto 10px;
+            }
+        }
+        .product3,
+        .product4 {
+            width: 300px;
+            height: 340px;
+            position: absolute;
+        }
+        .product3 {
+            top: 340px;
+            left: -1px;
+            border: 1px solid #e0e0e0;
+        }
+        .product4 {
+            top: 340px;
+            left: 300px;
+        }
+        .product1 a,
+        .product2 a,
+        .product3 a,
+        .product4 a {
+            display: block;
+        }
+        .product3 img,
+        .product4 img {
+            display: block;
+            width: 200px;
+            height: 200px;
+            margin: 35px auto 40px;
+        }
+        .product1 a span,
+        .product2 a span,
+        .product3 a span,
+        .product4 a span {
+            display: block;
+            font-size: 14px;
+            line-height: 14px;
+            height: 14px;
+            color: #333;
+            text-align: center;
+        }
+        .product1 a {
+            span {
+                position: relative;
+                left: 0px;
+                top: -30px;
+            }
+            &:hover span {
+                color: #f30;
+            }
+        }
+        .product2 a:hover span,
+        .product3 a:hover span,
+        .product4 a:hover span {
+            color: #f30;
+        }
+    }
+    /* 会员专区 */
+    .vip {
+        height: 39px;
+        margin-top: 80px;
+        margin-bottom: 55px;
+        h2 {
+            height: 39px;
+            width: 160px;
+            margin: 0 auto;
+            text-indent: -100%;
+            overflow: hidden;
+            background: url(http://10.31.163.21/project/csh/1902chenshaohua/meide/src/img/index_title_sprite.png) no-repeat 0 -75px;
+            background-size: 160px 115px;
+        }
+        a {
+            display: block;
+            font-size: 12px;
+            line-height: 12px;
+            margin: 20px auto 40px;
+            text-align: center;
+            color: #999;
+            &:hover {
+                color: #f30;
+            }
+        }
+    }
+    .vip_list {
+        border: 1px solid #e0e0e0;
+        overflow: hidden;
+        margin-bottom: 120px;
+        ul {
+            height: 420px;
+        }
+        li {
+            float: left;
+            width: 298px;
+            height: 420px;
+            border-right: 1px solid #e0e0e0;
+            &:nth-child(4) {
+                border-right: 0;
+            }
+            a {
+                display: block;
+                img {
+                    display: block;
+                    width: 200px;
+                    height: 300px;
+                    margin: 30px auto 10px;
+                }
+            }
+        }
+        .btn {
+            color: #333;
+            margin: 0 auto;
+            display: block;
+            width: 118px;
+            height: 38px;
+            line-height: 38px;
+            border: 1px solid #c8c8c8;
+            border-radius: 2px;
+            text-align: center;
+            padding: 0;
+        }
+    }
+}

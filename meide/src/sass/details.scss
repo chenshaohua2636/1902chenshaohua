@@ -1,0 +1,609 @@
+@charset "utf-8";
+@import "header";
+
+/* content */
+
+
+/* 导航 */
+
+#content {
+    margin-bottom: 50px;
+    .nav_border {
+        width: 100%;
+        border-bottom: 1px solid #eee;
+    }
+    .inner {
+        width: 1190px;
+        .nav_det {
+            margin: 11px auto 10px auto;
+            height: 20px;
+            a {
+                display: block;
+                height: 20px;
+                line-height: 20px;
+                color: #666;
+                float: left;
+                &:hover {
+                    color: #0092d8;
+                }
+                &:last-child:hover {
+                    color: #666;
+                }
+            }
+            i {
+                display: block;
+                float: left;
+                width: 10px;
+                height: 10px;
+                margin: 5px;
+                background: url(http://10.31.163.21/project/csh/1902chenshaohua/meide/src/img/atom_sprite.png) no-repeat -20px -20px;
+            }
+        }
+    }
+    .wrap {
+        width: 1190px;
+        height: 632px;
+        margin: 40px auto 60px auto;
+        position: relative;
+        .product_left {
+            height: 632px;
+            width: 680px;
+            float: left;
+        }
+    }
+}
+
+
+/* 放大镜 */
+
+#smallpic {
+    width: 500px;
+    height: 500px;
+    float: left;
+    position: relative;
+    img {
+        width: 500px;
+        height: 500px;
+    }
+}
+
+#smallfang {
+    width: 209px;
+    height: 209px;
+    background-color: #0080dc;
+    opacity: .2;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    visibility: hidden;
+    cursor: move;
+}
+
+#bigfang {
+    visibility: hidden;
+    position: absolute;
+    overflow: hidden;
+    left: 595px;
+    height: 500px;
+    width: 500px;
+    z-index: 99;
+    background-color: #fff;
+    img {
+        width: 1200px;
+        height: 1200px;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+    }
+}
+
+#productlist {
+    clear: right;
+    margin-top: 30px;
+    padding-left: 50px;
+    height: 64px;
+    position: absolute;
+    left: 0px;
+    bottom: 15px;
+    overflow: hidden;
+}
+
+#list {
+    float: left;
+    margin-left: 18px;
+    width: 612px;
+    position: relative;
+    ul {
+        list-style: none;
+        float: left;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        li {
+            float: left;
+            width: 56px;
+            height: 56px;
+            padding-right: 6px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            margin: 0 10px 0 0;
+            position: relative;
+            opacity: 1.0;
+        }
+        .active {
+            border: 2px solid #f60;
+        }
+    }
+}
+
+ul li img {
+    width: 60px;
+    height: 54px;
+    border: 1px solid #ccc;
+}
+
+#content .wrap {
+    .share {
+        clear: right;
+        overflow: hidden;
+        padding-left: 50px;
+        margin-top: 20px;
+        height: 18px;
+        position: absolute;
+        left: 20px;
+        bottom: -30px;
+        .share_list,
+        .collect {
+            float: left;
+        }
+        span {
+            display: block;
+            float: left;
+            font-size: 12px;
+            height: 18px;
+            line-height: 18px;
+            color: #333;
+        }
+        .share_list a,
+        .collect i {
+            float: left;
+            display: block;
+            width: 18px;
+            height: 18px;
+            background: url(http://10.31.163.21/project/csh/1902chenshaohua/meide/src/img/detail_sprite.png) no-repeat -20px -66px;
+            margin-left: 10px;
+        }
+        .share_list a:last-child {
+            width: 22px;
+            background-position: -38px -66px;
+        }
+        .collect {
+            margin-left: 20px;
+            border-left: 1px solid #e6e6e6;
+            span {
+                margin-left: 6px;
+            }
+            i {
+                cursor: pointer;
+                margin-left: 20px;
+                &:nth-child(1) {
+                    background-position: -40px -90px;
+                    &:hover {
+                        background-position: -60px -90px;
+                    }
+                }
+                &:nth-child(3) {
+                    background-position: -100px -126px;
+                }
+            }
+        }
+    }
+    /* product right 右边的 */
+    .product_right {
+        float: right;
+        width: 510px;
+        /* 主标题 */
+        h1 {
+            margin-top: -3px;
+            margin-bottom: 10px;
+            color: #333;
+            font-size: 22px;
+            font-weight: normal;
+            line-height: 28px;
+            overflow: hidden;
+            word-wrap: break-word;
+            word-break: break-all;
+            max-height: 54px;
+            span {
+                display: inline-block;
+                height: 14px;
+                line-height: 14px;
+                padding: 2px 4px;
+                margin: 0 4px 2px 0;
+                vertical-align: middle;
+                font-size: 12px;
+                border: 1px solid #f60;
+                border-radius: 2px;
+                color: #f60;
+            }
+        }
+        h5 {
+            color: #f60;
+            font-size: 12px;
+            line-height: 18px;
+            font-weight: normal;
+            margin-top: -3px;
+            margin-bottom: 8px;
+            overflow: hidden;
+            word-wrap: break-word;
+            word-break: break-all;
+            position: relative;
+            span {
+                color: #0092d8;
+                font-size: 10px;
+                border: 1px #0092d8 solid;
+                padding: 0 2px;
+                border-radius: 2px;
+            }
+        }
+        /* 倒计时 */
+        .daojishi {
+            background: #f60;
+            color: #fff;
+            padding: 8px 15px;
+            span:nth-child(1) {
+                display: inline-block;
+                width: 14px;
+                height: 14px;
+                background: url(http://10.31.163.21/project/csh/1902chenshaohua/meide/src/img/detail_sprite.png) no-repeat -40px -154px;
+                vertical-align: text-bottom;
+            }
+        }
+        .product_price {
+            background-color: #f2f2f2;
+            padding: 15px 20px;
+            clear: both;
+            overflow: hidden;
+            span {
+                font-size: 18px;
+                line-height: 1;
+                color: #f60;
+            }
+            b {
+                font-size: 32px;
+                line-height: 1;
+                color: #f60;
+            }
+            del {
+                font-weight: normal;
+                color: #999;
+                margin-left: 10px;
+                font-size: 12px;
+            }
+            .bztehui {
+                display: inline-block;
+                color: #fff;
+                font-size: 12px;
+                height: 18px;
+                line-height: 18px;
+                padding: 0 10px;
+                margin: 11px 0 0 10px;
+                background: #ff6600;
+            }
+        }
+        .yhpl {
+            padding: 20px 0 0px;
+            position: relative;
+            z-index: 10;
+            overflow: hidden;
+            .youhui {
+                border-bottom: 1px dashed #eee;
+            }
+        }
+        h3 {
+            float: left;
+            width: 54px;
+            font-size: 12px;
+            color: #999;
+            font-weight: normal;
+            margin-top: 3px;
+        }
+        .yhpl {
+            .youhui span {
+                &:nth-child(2) {
+                    display: inline-block;
+                    width: 54px;
+                    line-height: 18px;
+                    color: #fff;
+                    background-color: #f60;
+                    text-align: center;
+                    margin-bottom: 10px;
+                }
+                &:last-child {
+                    margin-left: 10px;
+                    width: 386px;
+                }
+            }
+            .pinglun {
+                padding-top: 10px;
+                border-bottom: 1px solid #eee;
+                overflow: hidden;
+                h3 {
+                    margin-top: 6px;
+                }
+                span {
+                    display: inline-block;
+                    height: 24px;
+                    line-height: 24px;
+                    padding: 0 10px;
+                    margin: 0 15px 10px 0;
+                    color: #000;
+                    border: 1px solid #90ebae;
+                    border-radius: 2px;
+                    overflow: hidden;
+                }
+            }
+        }
+        /* 规格数量配送供应商 */
+        .gspg {
+            position: relative;
+            padding-bottom: 30px;
+            .guige,
+            .shuliang {
+                overflow: hidden;
+            }
+            .peisong {
+                overflow: hidden;
+                .address {
+                    overflow: hidden;
+                }
+            }
+            .gongying {
+                overflow: hidden;
+            }
+            /* 规格 */
+            .guige {
+                h3 {
+                    margin-top: 9px;
+                }
+                .liang {
+                    height: 26px;
+                    line-height: 26px;
+                    margin-bottom: 15px;
+                    float: left;
+                    margin-left: 10px;
+                    cursor: pointer;
+                }
+                span {
+                    display: block;
+                    padding: 0 7px;
+                    height: 26px;
+                    line-height: 26px;
+                    border: 2px solid #f60;
+                    text-align: center;
+                    margin-bottom: 15px;
+                    float: left;
+                    margin-left: 10px;
+                    cursor: pointer;
+                    &:last-child {
+                        border: 2px solid #D6D6D6;
+                    }
+                }
+            }
+            /* 数量 */
+            .shuliang {
+                h3 {
+                    margin-top: 9px;
+                }
+                span {
+                    float: left;
+                    width: 28px;
+                    height: 28px;
+                    line-height: 28px;
+                    border: 1px solid #d6d6d6;
+                    text-align: center;
+                    position: relative;
+                }
+                input {
+                    float: left;
+                    position: relative;
+                    border-radius: 0;
+                    width: 40px;
+                    height: 26px;
+                    line-height: 28px;
+                    border: 1px solid #d6d6d6;
+                    background: #fff;
+                    border-left: 0;
+                    border-right: 0;
+                    text-align: center;
+                }
+                span {
+                    i {
+                        display: block;
+                        width: 12px;
+                        height: 12px;
+                        border: 0;
+                        background: url(http://10.31.163.21/project/csh/1902chenshaohua/meide/src/img/detail_sprite.png) no-repeat -39px -109px;
+                        position: relative;
+                        left: 8px;
+                        top: 8px;
+                    }
+                    &:nth-child(3) i {
+                        background-position: -19px -109px;
+                    }
+                }
+            }
+            /* 配送 */
+            .peisong {
+                margin-top: 15px;
+                h3 {
+                    margin-top: 9px;
+                }
+                .song {
+                    user-select: none;
+                    position: relative;
+                    float: left;
+                    height: 30px;
+                    line-height: 26px;
+                    z-index: 49;
+                }
+                .address {
+                    display: inline-block;
+                    span {
+                        float: left;
+                        line-height: 28px;
+                        color: #000;
+                        margin-right: 5px;
+                    }
+                }
+                .song .youhuo {
+                    display: block;
+                    height: 28px;
+                    line-height: 28px;
+                    margin-left: 10px;
+                    float: right;
+                }
+                .address .select_address {
+                    display: block;
+                    position: relative;
+                    height: 28px;
+                    line-height: 26px;
+                    border: 1px solid #D6D6D6;
+                    padding: 0 10px 0 10px;
+                    overflow: hidden;
+                    float: left;
+                    i {
+                        background: url(http://10.31.163.21/project/csh/1902chenshaohua/meide/src/img/detail_sprite.png) no-repeat -60px -117px;
+                        display: inline-block;
+                        width: 8px;
+                        height: 4px;
+                        margin-left: 6px;
+                        position: relative;
+                        top: -3px;
+                    }
+                }
+            }
+            /* 供应商 */
+            .gongying {
+                margin-top: 20px;
+                h3 {
+                    margin-top: 9px;
+                }
+                span {
+                    display: inline-block;
+                    height: 30px;
+                    line-height: 30px;
+                    color: #000;
+                }
+            }
+            .btn_list {
+                margin-bottom: 10px;
+                .jiaru_cart {
+                    background-color: #0092d8;
+                    margin-right: 10px;
+                    display: inline-block;
+                    font-size: 14px;
+                    height: 40px;
+                    line-height: 40px;
+                    width: 205px;
+                    text-align: center;
+                    color: #fff;
+                    padding: 0;
+                    cursor: pointer;
+                    border-radius: 2px;
+                }
+                /* 加购按钮组 */
+                .lijigm {
+                    background-color: #0092d8;
+                    margin-right: 10px;
+                    display: inline-block;
+                    font-size: 14px;
+                    height: 40px;
+                    line-height: 40px;
+                    width: 205px;
+                    text-align: center;
+                    color: #fff;
+                    padding: 0;
+                    cursor: pointer;
+                    border-radius: 2px;
+                    background-color: #f60;
+                }
+            }
+            .last_con {
+                .weiyi,
+                .qglb,
+                .qcby {
+                    float: left;
+                    margin-right: 15px;
+                }
+                span {
+                    display: inline-block;
+                    padding-left: 5px;
+                    font-size: 12px;
+                    height: 18px;
+                    line-height: 18px;
+                    position: relative;
+                    top: -4px;
+                }
+                i {
+                    display: inline-block;
+                    height: 18px;
+                    width: 18px;
+                    background: url(http://10.31.163.21/project/csh/1902chenshaohua/meide/src/img/detail_sprite.png) no-repeat 0 -66px;
+                    position: relative;
+                }
+            }
+            /* 弹窗 */
+            .tanchuang {
+                display: none;
+                position: relative;
+            }
+        }
+    }
+}
+
+
+/* 固定导航 */
+
+#fixed {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    width: 62px;
+    ul li {
+        background: #000;
+        opacity: .75;
+        border-bottom: 1px solid #5a5959;
+        a {
+            display: block;
+            padding: 12px;
+            color: #D6D6D6;
+            line-height: 1;
+            text-align: center;
+            span {
+                display: none;
+            }
+            i {
+                display: block;
+                height: 38px;
+                width: 38px;
+                background: url(http://10.31.163.21/project/csh/1902chenshaohua/meide/src/img/detail_servic_2.png) no-repeat;
+            }
+        }
+        &:nth-child(1) a i {
+            background-position: 0 0;
+        }
+        &:nth-child(2) a i {
+            background-position: -38px 0;
+        }
+        &:nth-child(3) a i {
+            background-position: -76px 0;
+        }
+        &:nth-child(4) a i {
+            background-position: -114px 0;
+        }
+    }
+}
+
+@import "footer";

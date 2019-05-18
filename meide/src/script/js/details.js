@@ -3,7 +3,7 @@
     var picid = location.search.substring(1).split('=')[1];
     //将当前的id传给后端获取对应的数据
     $.ajax({
-        url: 'http://10.31.163.21/project/csh/1902chenshaohua/meide/php/details.php',
+        url: '../php/details.php',
         data: {
             sid: picid
         },
@@ -124,7 +124,7 @@
         // console.log(picid);
         cookietoarray(); //获取已经存在的cookie值。
         if (confirm('是否加入购物车？')) {
-            location.href = "http://10.31.163.21/project/csh/1902chenshaohua/meide/src/cart.html";
+            location.href = "cart.html";
             if ($.inArray(picid, arrsid) != -1) { //商品存在，数量叠加 
                 //先取出cookie中的对应的数量值+当前添加的数量值，添加到对应的cookie中。
                 var num = parseInt(arrnum[$.inArray(picid, arrsid)]) + parseInt($('#number').val());
@@ -158,5 +158,5 @@
     }
     countDown();
     setInterval(countDown, 1000);
-    console.log(new Date() - d1);
+    // console.log(new Date() - d1);
 })();

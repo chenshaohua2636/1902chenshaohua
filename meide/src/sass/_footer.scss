@@ -1,0 +1,42 @@
+@charset "utf-8";
+#footer {
+    .footer_links {
+        height: 42px;
+        border-top: 1px solid #e0e0e0;
+        border-bottom: 1px solid #e0e0e0;
+        ul {
+            height: 42px;
+            li {
+                float: left;
+                a {
+                    display: block;
+                    height: 42px;
+                    width: 150px;
+                    line-height: 42px;
+                    color: #666;
+                    &:hover {
+                        color: #f30;
+                    }
+                }
+            }
+        }
+    }
+    .footer_info {
+        height: 42px;
+        p {
+            color: #999;
+        }
+        a {
+            color: #999;
+            &:hover {
+                color: #f30;
+            }
+        }
+        img {
+            width: 20px;
+            height: 20px;
+            position: relative;
+            top: 4px;
+        }
+    }
+}

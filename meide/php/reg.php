@@ -29,6 +29,6 @@
 		//添加语句
 		$query="insert userlist (sid,username,password,regdate) values(null,'$user','$pass',NOW())";
 		mysql_query($query);
-		header('location:../src/login.html');//页面的跳转
+		header('location:../dist/login.html');//页面的跳转
 	}
 ?>

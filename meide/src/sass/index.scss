@@ -1,4 +1,5 @@
 @charset "utf-8";
+@import "header";
 $imgwidth:1200px;
 #banner {
     .inner {
@@ -24,7 +25,7 @@ $imgwidth:1200px;
                         display: inline-block;
                         width: 30px;
                         height: 30px;
-                        background: url(../img/index_sprite.png) no-repeat;
+                        background: url(http://10.31.163.21/project/csh/1902chenshaohua/meide/src/img/index_sprite.png) no-repeat;
                     }
                     a {
                         line-height: 56px;
@@ -41,7 +42,7 @@ $imgwidth:1200px;
                         width: 12px;
                         height: 12px;
                         margin-left: 2px;
-                        background: url(../img/index_sprite.png) no-repeat -69px -188px;
+                        background: url(http://10.31.163.21/project/csh/1902chenshaohua/meide/src/img/index_sprite.png) no-repeat -69px -188px;
                     }
                     .sub_nav_list {
                         display: none;
@@ -256,7 +257,7 @@ $imgwidth:1200px;
                     display: block;
                     width: 60px;
                     height: 60px;
-                    background: url(../img/index_sprite.png) no-repeat -170px -59px;
+                    background: url(http://10.31.163.21/project/csh/1902chenshaohua/meide/src/img/index_sprite.png) no-repeat -170px -59px;
                 }
                 a:hover {
                     background-position: -171px -124px;
@@ -270,7 +271,7 @@ $imgwidth:1200px;
                     display: block;
                     width: 60px;
                     height: 60px;
-                    background: url(../img/index_sprite.png) no-repeat -233px -59px;
+                    background: url(http://10.31.163.21/project/csh/1902chenshaohua/meide/src/img/index_sprite.png) no-repeat -233px -59px;
                 }
                 a:hover {
                     background-position: -234px -124px;
@@ -313,3 +314,6 @@ $imgwidth:1200px;
         }
     }
 }
+
+@import "content";
+@import "footer";

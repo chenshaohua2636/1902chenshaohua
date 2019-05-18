@@ -25,7 +25,7 @@
 
     //ul赋值宽度，让所有的li排成一行。
     $picLi = $('.lunbo ul li'); //7
-    console.log($picLi.length)
+
     var $liWidth = $($picLi[0]).outerWidth(); //1个li的宽度
     $picUl.css({ "width": $liWidth * $picLi.length + 'px' });
     $picUl.css({ "left": -$liWidth + 'px' });
@@ -136,10 +136,10 @@
 //数据渲染
 (function() {
     $.ajax({
-        url: 'http://10.31.163.21/project/csh/1902chenshaohua/meide/php/pic.php',
+        url: '../php/pic.php',
         dataType: 'json',
         success: function(data) {
-            console.log(data);
+            // console.log(data);
             var $htmlStr = '';
             $.each(data, function(index, value) {
                 $htmlStr += `
@@ -162,10 +162,3 @@
         }
     });
 })();
-// <li>
-//     <a href="details.html?sid=${value.picid}">
-//         <img src="${value.url}">
-//         <p>${value.title}</p>
-//         <span>￥${value.price}</span>    
-//     </a>
-// </li>

@@ -1,0 +1,434 @@
+@charset "utf-8";
+@import "header";
+.inner {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+
+/* cart-top */
+
+#content .cart_top {
+    background-color: #fff;
+    border-bottom: 1px solid #e9e9e9;
+    margin-bottom: 20px;
+    overflow: hidden;
+    .cart_tittle h2 {
+        font-size: 32px;
+        line-height: 80px;
+        color: #333;
+        font-weight: normal;
+    }
+    /* cart_body */
+    .cart_address {
+        background-color: #fff;
+        max-width: 260px;
+        margin-top: 26px;
+        .cart_address_inner {
+            position: relative;
+            float: left;
+            height: 28px;
+            line-height: 26px;
+            z-index: 49;
+            span {
+                float: left;
+                height: 28px;
+                line-height: 28px;
+            }
+            .address {
+                display: inline-block;
+                position: relative;
+                height: 28px;
+                line-height: 28px;
+                padding: 0 10px 0 10px;
+                overflow: hidden;
+                i {
+                    display: inline-block;
+                    width: 10px;
+                    height: 6px;
+                    margin-left: 6px;
+                    background: url(http://10.31.163.21/project/csh/1902chenshaohua/meide/src/img/atom_sprite.png) no-repeat 0 -44px;
+                }
+            }
+        }
+    }
+}
+
+#cart_body .title_list {
+    ul {
+        border: 1px solid #e9e9e9;
+        background-color: #fafafa;
+        height: 40px;
+        line-height: 40px;
+        color: #333;
+        li {
+            float: left;
+            color: #aaa;
+            &:nth-child(1) {
+                width: 114px;
+                padding: 0 10px 0 20px;
+                color: #333;
+            }
+        }
+    }
+    .checkedbox {
+        float: left;
+        margin: 13px 10px 0 0;
+        width: 16px;
+        height: 16px;
+        position: relative;
+        .checked {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            top: -4px;
+            left: -5px;
+            border: none;
+        }
+    }
+    ul li {
+        &:nth-child(2) {
+            width: 315px;
+        }
+        &:nth-child(3),
+        &:nth-child(4),
+        &:nth-child(5),
+        &:nth-child(6) {
+            width: 160px;
+        }
+        &:nth-child(7) {
+            width: 99px;
+        }
+    }
+}
+
+
+/* 商品上面的 */
+
+#cart_list {
+    .cart_item {
+        border: 1px solid #ccc;
+        margin-top: 20px;
+        .item_title {
+            background-color: #fafafa;
+            height: 40px;
+            line-height: 40px;
+            padding-left: 20px;
+        }
+    }
+    .guanfang_icon {
+        margin-left: 24px;
+        line-height: 40px;
+        i {
+            display: inline-block;
+            height: 16px;
+            width: 16px;
+            position: relative;
+            top: 4px;
+            background: url(http://10.31.163.21/project/csh/1902chenshaohua/meide/src/img/cart_sprite.png) no-repeat -20px -74px;
+        }
+    }
+    .product_lists {
+        position: relative;
+        background-color: #fff;
+        border-top: 1px solid #ccc;
+        color: #333;
+        font-size: 12px;
+        line-height: 18px;
+        .product_warp {
+            padding: 0 20px;
+        }
+    }
+    .item_product {
+        overflow: hidden;
+        background: #fffceb;
+        /* 复选框 */
+        .choose {
+            position: relative;
+            width: 14px;
+            padding: 20px 20px 0 0;
+            float: left;
+            .checkedbox {
+                margin: 0;
+            }
+        }
+    }
+    /* 空空如也 */
+    .cart_none {
+        height: 98px;
+        padding: 80px 0 120px;
+        color: #333;
+        text-align: center;
+    }
+    .cart_none_w {
+        height: 98px;
+        line-height: 20px;
+        font-size: 14px;
+        padding-left: 341px;
+        padding-top: 25px;
+        a {
+            display: block;
+            color: #1523e2;
+        }
+    }
+    .product_lists .product_warp {
+        /* 商品图片 */
+        .product_pic {
+            width: 90px;
+            float: left;
+            padding: 20px 0;
+            img {
+                width: 78px;
+                height: 78px;
+                border: 1px solid #eee;
+            }
+        }
+        /* 商品信息 */
+        .product_xinxi {
+            width: 225px;
+            padding-right: 90px;
+            padding-left: 0;
+            height: 16px;
+            overflow: hidden;
+            float: left;
+            padding: 20px 0;
+            a {
+                color: #333;
+                font-size: 12px;
+                line-height: 18px;
+            }
+        }
+        /* 商品规格 */
+        .product_guige {
+            float: left;
+            padding: 20px 0 20px 90px;
+            width: 160px;
+        }
+        /* 商品价格 */
+        /* 商品数量 */
+        .product_price,
+        .product_num,
+        .product_sum {
+            float: left;
+            padding: 20px 0;
+            width: 160px;
+        }
+        .product_price {
+            del {
+                display: block;
+                color: #a9a9a9;
+            }
+            span {
+                font-weight: bolder;
+                color: #333;
+                display: block;
+            }
+            div {
+                display: block;
+                position: relative;
+                margin-top: 6px;
+                cursor: pointer;
+                span {
+                    display: inline-block;
+                    color: #fff;
+                    font-size: 12px;
+                    line-height: 20px;
+                    height: 20px;
+                    padding: 0 6px;
+                    background: #f60;
+                    border: 1px solid #f60;
+                }
+            }
+        }
+        .product_num {
+            span {
+                float: left;
+                width: 28px;
+                height: 28px;
+                line-height: 28px;
+                border: 1px solid #d6d6d6;
+                text-align: center;
+                position: relative;
+            }
+            input {
+                float: left;
+                position: relative;
+                border-radius: 0;
+                width: 40px;
+                height: 26px;
+                line-height: 28px;
+                border: 1px solid #d6d6d6;
+                background: #fff;
+                border-left: 0;
+                border-right: 0;
+                text-align: center;
+            }
+            span {
+                i {
+                    display: block;
+                    width: 12px;
+                    height: 12px;
+                    border: 0;
+                    background: url(http://10.31.163.21/project/csh/1902chenshaohua/meide/src/img/detail_sprite.png) no-repeat -39px -109px;
+                    position: relative;
+                    left: 8px;
+                    top: 8px;
+                }
+                &:nth-child(3) i {
+                    background-position: -19px -109px;
+                }
+            }
+        }
+        /* 小计 */
+        .product_sum .sum {
+            color: #f60;
+            font-weight: bolder;
+        }
+        /* 操作 */
+        .product_caozuo {
+            width: 79px;
+            padding-left: 0;
+            float: left;
+            padding: 20px 0;
+            span {
+                display: block;
+                &:last-child {
+                    font-weight: bolder;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+#kongbai {
+    width: 100%;
+    height: 125px;
+    background: #f4f4f4;
+}
+
+
+/* footer */
+
+#footer {
+    position: fixed;
+    bottom: -2px;
+    width: 100%;
+    .inner {
+        z-index: 10;
+        margin: 0 auto;
+    }
+    .cart_bottom {
+        width: 100%;
+        max-width: 1188px;
+        height: 60px;
+        margin-top: 10px;
+        padding-left: 10px;
+        background-color: #fafafa;
+        border: 1px solid #e9e9e9;
+        position: relative;
+        /* footer left */
+        .cart_bottom_left {
+            line-height: 60px;
+            clear: right;
+            overflow: hidden;
+        }
+        .choose {
+            position: relative;
+            width: 26px;
+            padding: 23px 10px 0 0;
+            z-index: 3;
+            float: left;
+        }
+        /* 复选框 */
+        .checkedbox {
+            width: 16px;
+            height: 16px;
+            position: relative;
+            z-index: 3;
+            .checked {
+                position: absolute;
+                z-index: 3;
+                width: 16px;
+                height: 16px;
+                top: -4px;
+                left: 5px;
+            }
+        }
+        span {
+            float: left;
+        }
+        .del,
+        .move,
+        .clear {
+            float: left;
+            margin-left: 40px;
+            cursor: pointer;
+        }
+        /* footer right */
+        .cart_bottom_right {
+            position: absolute;
+            right: 0;
+            top: 0;
+            .right_choose {
+                margin-right: 40px;
+                line-height: 60px;
+                float: left;
+                span i {
+                    display: inline-block;
+                    padding: 0 3px;
+                    color: #f60;
+                    line-height: 60px;
+                }
+            }
+            /* 勾选数量 */
+            .right_price {
+                padding-top: 11px;
+                margin-right: 40px;
+                float: left;
+                /* 合计 */
+                .heji {
+                    line-height: 18px;
+                    overflow: hidden;
+                    .right_sum i {
+                        color: #f60;
+                        font-size: 18px;
+                        line-height: 18px;
+                        font-weight: bolder;
+                    }
+                }
+                /* 运费 */
+                .yunfei {
+                    color: #333;
+                    line-height: 12px;
+                    margin-top: 6px;
+                }
+            }
+            /* 结算 */
+            .right_jiesuan {
+                width: 160px;
+                text-align: center;
+                font-size: 18px;
+                line-height: 60px;
+                background-color: #f60;
+                color: #fff;
+                cursor: pointer;
+                float: left;
+            }
+        }
+    }
+}
+
+@import "footer";

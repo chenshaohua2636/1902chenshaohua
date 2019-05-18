@@ -1,7 +1,7 @@
 (function() {
     function goodslist(id, count) {
         $.ajax({
-            url: 'http://10.31.163.21/project/csh/1902chenshaohua/meide/php/pic.php', //获取所有的接口数据
+            url: '../php/pic.php', //获取所有的接口数据
             dataType: 'json'
         }).done(function(data) {
             $.each(data, function(index, value) {
@@ -165,7 +165,7 @@
         if (confirm('你确定要删除吗？')) {
 
             $(this).first().parents('.product_lists').remove(); //通过当前点击的元素找到整个一行列表，删除
-            kong();
+            location.reload();
         }
         delgoodslist($(this).first().parents('.product_lists').find('img').attr('sid'), arrsid);
         priceall();
